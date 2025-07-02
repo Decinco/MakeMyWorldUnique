@@ -1,4 +1,4 @@
-package me.radcriminal77.miniworld2;
+package com.decinco.makemyworldunique;
 
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
 import com.sk89q.worldguard.WorldGuard;

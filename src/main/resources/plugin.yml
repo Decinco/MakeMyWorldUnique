@@ -1,7 +1,7 @@
-name: MiniWorld2
+name: MakeMyWorldUnique
 version: '${project.version}'
-main: me.radcriminal77.miniworld2.MiniWorld2
-api-version: 1.19
+main: com.decinco.makemyworldunique.UniqueMain
+api-version: 1.21
 load: STARTUP # load is on startup because worlds might use MiniWorld2:empty as their generators for void worlds
 authors:
   - TheKDub

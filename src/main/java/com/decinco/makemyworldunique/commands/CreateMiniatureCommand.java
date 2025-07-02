@@ -1,6 +1,6 @@
-package me.radcriminal77.miniworld2.commands;
+package com.decinco.makemyworldunique.commands;
 
-import me.radcriminal77.miniworld2.MiniWorld2Manager;
+import com.decinco.makemyworldunique.UniqueManager;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.command.Command;
@@ -22,7 +22,7 @@ public class CreateMiniatureCommand implements CommandExecutor {
             return false;
         }
 
-        World miniature = MiniWorld2Manager.createMiniatureOf(parent);
+        World miniature = UniqueManager.createMiniatureOf(parent);
 
         sender.sendPlainMessage("Miniature world " + miniature.getName() + " created.");
 

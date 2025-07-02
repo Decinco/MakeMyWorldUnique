@@ -1,10 +1,8 @@
-package me.radcriminal77.miniworld2;
+package com.decinco.makemyworldunique;
 
-import com.onarandombox.MultiverseCore.MultiverseCore;
-import com.onarandombox.MultiverseCore.api.MVWorldManager;
-import me.radcriminal77.miniworld2.commands.CreateEmptyWorldCommand;
-import me.radcriminal77.miniworld2.commands.CreateMiniatureCommand;
-import me.radcriminal77.miniworld2.commands.RemoveMiniatureCommand;
+import com.decinco.makemyworldunique.commands.CreateEmptyWorldCommand;
+import com.decinco.makemyworldunique.commands.CreateMiniatureCommand;
+import com.decinco.makemyworldunique.commands.RemoveMiniatureCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
@@ -13,14 +11,16 @@ import org.bukkit.event.server.ServerLoadEvent;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
+import org.mvplugins.multiverse.core.MultiverseCoreApi;
+import org.mvplugins.multiverse.core.world.WorldManager;
 
-public final class MiniWorld2 extends JavaPlugin implements Listener {
+public final class UniqueMain extends JavaPlugin implements Listener {
 
-    private static MVWorldManager mvWorldManager;
+    private static MultiverseCoreApi mvApi;
 
     @NotNull
-    public static MVWorldManager getMvWorldManager() {
-        return mvWorldManager;
+    public static WorldManager getMvWorldManager() {
+        return mvApi.getWorldManager();
     }
 
     private static boolean worldGuardIntegration;
@@ -29,9 +29,9 @@ public final class MiniWorld2 extends JavaPlugin implements Listener {
         return worldGuardIntegration;
     }
 
-    private static MiniWorld2 instance = null;
+    private static UniqueMain instance = null;
 
-    public static MiniWorld2 getInstance() {
+    public static UniqueMain getInstance() {
         return instance;
     }
 
@@ -87,7 +87,7 @@ public final class MiniWorld2 extends JavaPlugin implements Listener {
     @Override
     public void onDisable() {
         // Remove all miniatures created before MiniWorld2 gets turned off
-        MiniWorld2Manager.cleanMiniatures();
+        UniqueManager.cleanMiniatures();
     }
 
     @Override

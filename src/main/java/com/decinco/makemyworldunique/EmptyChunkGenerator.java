@@ -1,4 +1,4 @@
-package me.radcriminal77.miniworld2;
+package com.decinco.makemyworldunique;
 
 import org.bukkit.Location;
 import org.bukkit.World;

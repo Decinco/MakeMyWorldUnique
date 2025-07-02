@@ -1,6 +1,6 @@
-package me.radcriminal77.miniworld2.commands;
+package com.decinco.makemyworldunique.commands;
 
-import me.radcriminal77.miniworld2.MiniWorld2Manager;
+import com.decinco.makemyworldunique.UniqueManager;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.command.Command;
@@ -25,7 +25,7 @@ public class RemoveMiniatureCommand implements CommandExecutor {
         }
 
         try {
-            MiniWorld2Manager.removeMiniature(miniature);
+            UniqueManager.removeMiniature(miniature);
         } catch (IllegalArgumentException ex) {
             sender.sendPlainMessage("Error: " + ex.getMessage());
         }
